@@ -1,2 +1,2 @@
 # slack-bot
-A bot for out slack workspace
+A bot for Coding Coach slack workspace
