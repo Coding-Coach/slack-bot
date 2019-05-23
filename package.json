@@ -1,0 +1,27 @@
+{
+  "name": "coach-bot",
+  "version": "0.0.1",
+  "description": "Slack Bot for Coding Coach",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luanjubica/slack-bot.git"
+  },
+  "keywords": [
+    "slack",
+    "bot"
+  ],
+  "author": "Luan Jubica",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luanjubica/slack-bot/issues"
+  },
+  "homepage": "https://github.com/luanjubica/slack-bot#readme",
+  "dependencies": {
+    "@slack/bolt": "^1.1.0",
+    "@slack/events-api": "^2.2.0"
+  }
+}
