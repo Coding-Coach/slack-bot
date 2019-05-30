@@ -1,3 +1,5 @@
 {
-"APP_ID" : "AJYKVPX7Z"
+"APP_ID" : "AJYKVPX7Z",
+"welcomeChannelId" : "CJWLJKD7S",
+"default_template" :"template.html"
 }

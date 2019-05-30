@@ -1,0 +1,73 @@
+[
+	{
+		"type": "section",
+		"text": {
+			"type": "mrkdwn",
+			"text": "Hey there  <@${event.user.id}>! 👋 I'm Coach Bot. Good to have you here, make yourself at home:"
+		}
+	},
+	{
+		"type": "section",
+		"text": {
+			"type": "mrkdwn",
+			"text": "*1️⃣ Want to be a mentor?* "
+		}
+	},
+	{
+		"type": "section",
+		"text": {
+			"type": "mrkdwn",
+			"text": "https://github.com/Coding-Coach/find-a-mentor#want-to-be-a-mentor"
+		}
+	},
+	{
+		"type": "section",
+		"text": {
+			"type": "mrkdwn",
+			"text": "*2️⃣ Looking for a mentor?*"
+		}
+	},
+	{
+		"type": "section",
+		"text": {
+			"type": "mrkdwn",
+			"text": "Please visit our (alpha) website and review the list of our great mentors!"
+		}
+	},
+	{
+		"type": "section",
+		"text": {
+			"type": "plain_text",
+			"text": "You can filter by country or technology. Find someone? Just contact him / her / them via one of their channels.",
+			"emoji": true
+		}
+	},
+	{
+		"type": "section",
+		"text": {
+			"type": "mrkdwn",
+			"text": "<http://mentors.codingcoach.io|http://mentors.codingcoach.io>"
+		}
+	},
+	{
+		"type": "section",
+		"text": {
+			"type": "mrkdwn",
+			"text": "You have more questions? Please read our Mentorship Guidelines <https://docs.google.com/document/d/1zKCxmIh0Sd4aWLiQncICOGm6uf38S0kJ0xb0qErNFVA/edit"
+		}
+	},
+	{
+		"type": "section",
+		"text": {
+			"type": "mrkdwn",
+			"text": "Our common channels are:"
+		}
+	},
+	{
+		"type": "section",
+		"text": {
+			"type": "plain_text",
+			"text": "#introductions - Please introduce yourself to all :man-raising-hand::skin-tone-2:"
+		}
+	}
+]

@@ -1,22 +1,22 @@
 const { App } = require('@slack/bolt');
 const conf = require('./config.json');
+const template = require('./template.json');
 
-console.log(conf);
 // Initializes your app with your bot token and signing secret
 const app = new App({
   token: process.env.SLACK_BOT_TOKEN,
   signingSecret: process.env.SLACK_SIGNING_SECRET
 });
 
-const welcomeChannelId = 'CJWLJKD7S';
-
 // When a user joins the team, send a message in a predefined channel asking them to introduce themselves
 app.event('team_join', async ({ event, context }) => {
   try {
     const result = await app.client.chat.postMessage({
       token: context.botToken,
-      channel: welcomeChannelId,
-      text: `Welcome to the team, <@${event.user.id}>! 🎉 You can introduce yourself in this channel.`
+      channel: conf.welcomeChannelId,
+      //text: `Welcome to the team, <@${event.user.id}>! 🎉 You can introduce yourself in this channel.`,
+      attachments : template
+
     });
     console.log(result);
   }
