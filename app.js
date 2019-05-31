@@ -13,7 +13,7 @@ app.event('team_join', async ({ event, context }) => {
     if (!event.is_bot)
       const result = await app.client.chat.postMessage({
         token: context.botToken,
-        channel: conf.welcomeChannelId,
+        channel: event.user.id,
         text: `Welcome to the team, <@${event.user.id}>! 🎉 You can introduce yourself in this channel.`,
         attachments : JSON.stringify(template)
       });
