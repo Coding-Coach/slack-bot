@@ -8,13 +8,13 @@ const app = new App({
   signingSecret: process.env.SLACK_SIGNING_SECRET
 });
 // When a user joins the team, send a message in a predefined channel asking them to introduce themselves
-app.event('team_join', async ({ event, context }) => {
+app.event('member_joined_channel', async ({ event, context }) => {
   try {
     const result = await app.client.chat.postMessage({
       token: context.botToken,
       channel: conf.welcomeChannelId,
       text: `Welcome to the team, <@${event.user.id}>! 🎉 You can introduce yourself in this channel.`,
-      blocks : template
+      attachments : JSON.stringify(template)
     });
     console.log(result);
   }
