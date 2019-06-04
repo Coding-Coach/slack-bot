@@ -15,7 +15,8 @@ app.event('team_join', async ({ event, context }) => {
         token: context.botToken,
         channel: event.user.id,
         text: `Welcome to the team, <@${event.user.id}>! 🎉 You can introduce yourself in this channel.`,
-        attachments : JSON.stringify(template)
+        attachments : JSON.stringify(template),
+        as_user: true
       });
     console.log(result);
   }
