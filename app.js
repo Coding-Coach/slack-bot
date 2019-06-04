@@ -10,14 +10,18 @@ const app = new App({
 // When a user joins the team, send a message in a predefined channel asking them to introduce themselves
 app.event('team_join', async ({ event, context }) => {
   try {
-      const result = await app.client.chat.postMessage({
-      token: context.botToken,
-        channel: event.user.id,
-        text: 'Welcome to the team, <@${event.user.id}>! 🎉 You can introduce yourself in this channel.',
-        attachments : JSON.stringify(template),
-        as_user: true
-      });
-    console.log(result);
+      console.log(event);
+      if(!event.user.is_invited_user) {
+        const result = await app.client.chat.postMessage({
+          token: context.botToken,
+          channel: event.user.id,
+          text: `Welcome to the team, <@${event.user.id}>! 🎉 You can introduce yourself in this channel.`,
+          attachments : JSON.stringify(template),
+          blocks: template,
+          as_user: true
+        });
+        console.log(result);
+      }
   }
   catch (error) {
     console.error(error);
