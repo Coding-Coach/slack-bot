@@ -1,0 +1,44 @@
+[
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "Ahoy there <@%user-name%> :wave: Good to have you here, make yourself at home :blush:"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*Want to be a mentor?*\nCheckout <https://github.com/Coding-Coach/find-a-mentor/blob/master/README.md#want-to-be-a-mentor| this>"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*Looking for a mentor?*\nCheckout <https://github.com/Coding-Coach/find-a-mentor/blob/master/README.md#looking-for-a-mentor#want-to-be-a-mentor| this>"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*Our common channels are:*\n <#CCT9D2TUN> - Please introduce yourself to all :man-raising-hand:\n<#CCRBKGZTR> - General questions, notes and highlights\n<#CCR78Q1LY> - For technical questions mainly\n"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text":"*Other useful channels:*\n<#CJZQ7GDAP>, <#CKB78JH16>, <#CG42660JK>\n :point_right: <#CL5U9SEJC>, <#CCQDTKZC2> and <#CCPS7NR0R> are for the product related discussions. You can reach :male-technologist:<@DNS22CYQZ> and :male-technologist:<@DNHSLLW69> for questions about the product :point_left:"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*More info* @ <https://github.com/Coding-Coach/find-a-mentor/blob/master/README.md| Coding-Coach-Github>"
+      }
+    }
+]
