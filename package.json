@@ -1,0 +1,15 @@
+{
+  "name": "cc-slack-bot",
+  "version": "1.0.0",
+  "description": "A bot to make Slack channel interactive and welcoming",
+  "main": "app.js",
+  "repository": "https://github.com/mnttnm/slack-bot.git",
+  "author": "Mohit Tater",
+  "license": "MIT",
+  "dependencies": {
+    "@slack/bolt": "^1.4.1"
+  },
+  "scripts": {
+    "start": "node app.js"
+  }
+}
