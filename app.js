@@ -79,3 +79,7 @@ receiver.app.post('/invites', async (req, res) => {
   const server = await app.start(process.env.PORT || 3000);
   console.log('⚡️ CC app is running!', server.address());
 })();
+
+process.on('uncaughtException', function (err) {
+  console.log(err);
+});
