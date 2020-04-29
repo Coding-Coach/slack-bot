@@ -1,13 +1,21 @@
-const {App} = require("@slack/bolt")
+const { App } = require("@slack/bolt")
+require('dotenv').config()
+const Receiver = require('./receiver')
+const { inviteUser } = require('./slack')
 const welcomeMsg = require('./messages.json')
 
 const BOT_ICON_URL = `https://raw.githubusercontent.com/Coding-Coach/find-a-mentor/master/public/codingcoach-logo-512.png`
+
 const SLACK_BOT_TOKEN =  process.env.SLACK_BOT_TOKEN
 const SLACK_SIGNING_SECRET  =  process.env.SLACK_SIGNING_SECRET
 
+const receiver = new Receiver({
+  signingSecret: SLACK_SIGNING_SECRET,
+})
+
 const app = new App({
   token: SLACK_BOT_TOKEN,
-  signingSecret: SLACK_SIGNING_SECRET
+  receiver,
 })
 
 const formatMsgForUser = (user) => {
@@ -50,6 +58,22 @@ app.event("team_join", async ({ event, context }) => {
 });
 
 app.message('badger', ({ say }) => say('Badgers? BADGERS? WE DON’T NEED NO STINKIN BADGERS'));
+
+receiver.app.post('/invites', async (req, res) => {
+  try {
+    const response = await inviteUser({
+      email: req.body.email,
+      token: process.env.SLACK_USER_TOKEN
+    })
+    res.json(response)
+  } catch (err) {
+    res.json({
+      ok: false,
+      error: 'server_error',
+      message: err.message,
+    })
+  }
+});
 
 (async () => {
   const server = await app.start(process.env.PORT || 3000);
